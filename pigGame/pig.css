@@ -1,0 +1,14 @@
+.hidden{
+    display: none;
+}
+.dice{
+    width: 35px;
+    height: 35px;
+}
+.player--active{
+    background-color: rgba(248, 111, 111, 0.186);
+    transition: all 0.3s ease-in;
+}
+.player-winner{
+    background-color: rgba(126, 172, 247, 0.253);
+}
