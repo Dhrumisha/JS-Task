@@ -203,8 +203,22 @@ const fruits = {Bananas:300, Oranges:200, Apples:500};
 
 const myMap = new Map(Object.entries(fruits));
 myMap.set("Mangoes",50);
-console.log(myMap.get("Mangoes"));
+// console.log(myMap.get("Mangoes"));
 
-
-
+function greet(greeting){
+  console.log(`${this.name} ${greeting}`);
+  
+}
+const person = {
+  name:"Jinal"
+}
+const person2 = {
+  name:"Dhumi"
+}
+// greet.call(person,"hello");
+// greet.call(person2,"Good Morning");
+// greet.apply(person,["hello"]);
+// greet.apply(person2,["Good Morning"]);
+const bng = greet.bind(person);
+bng("hey");
 

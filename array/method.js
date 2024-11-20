@@ -8,12 +8,12 @@ function geeks(total, num) {
     return total - num;
 }
 
-console.log(sub);
+// console.log(sub);
 
 
 // Original array
 var numbers1 = [4, 9, 16, 25];
-console.log(numbers1);
+// console.log(numbers1);
 
 
 // function geeks() {
@@ -138,7 +138,7 @@ let findarr = ["hy","isha","jolly","helephent"];
 function greaterh(arr){
 	for (let i = 0; i < arr.length; i++) {
 		if(arr[i].startsWith("h")){
-			 console.log(arr[i]);
+			//  console.log(arr[i]);
 		 }
 		
 	}
@@ -147,6 +147,22 @@ function greaterh(arr){
 }
 // console.log(greaterh(findarr));
 // greaterh(findarr);
+
+
+function checkDogs(dogsJulia,dogsKate) {
+	const dogsJuliatCorrected = dogsJulia.slice();
+	dogsJuliatCorrected.splice(0,1);
+	dogsJuliatCorrected.splice(-2);
+
+	const dog = dogsJuliatCorrected.concat(dogsKate);
+
+	dog.forEach((dog,i)=>{
+		dog>=3?console.log(`Dog Number ${i+1} is an Adult and is ${dog} years old`)
+		:console.log(`Dog Number ${i+1} is still puppy`);
+		
+	})
+}
+// checkDogs([3,5,2,12,7],[4,1,15,8,3]);
 
 
 

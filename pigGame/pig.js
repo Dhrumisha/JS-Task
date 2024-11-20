@@ -98,3 +98,4 @@ btnHold.addEventListener("click", function () {
 });
 
 btnNew.addEventListener("click", init);
+

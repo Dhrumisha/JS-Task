@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="Enter Email"
+        class="form-input-email"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+        class="form-input-pass"
+      />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      // Function to validate the form
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const emailInput = document.querySelector(".form-input-email");
+        const passwordInput = document.querySelector(".form-input-pass");
+
+        const emailValue = emailInput.value.trim();
+        const passwordValue = passwordInput.value.trim();
+
+        // Basic email validation (checks for "@" and ".")
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(emailValue)) {
+          console.log("Invalid email address");
+          return;
+        }
+
+        // Password length validation (must be at least 8 characters)
+        if (passwordValue.length < 8) {
+          console.log("Password must be at least 8 characters long");
+          return;
+        }
+
+        console.log("Form submitted successfully!");
+      }
+
+      // Attach event listener to the form
+      const form = document.getElementById("login-form");
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>

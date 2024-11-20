@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" class="input-file" name="file" />
+    <p class="text"></p>
+
+    <script>
+      const inputFile = document.querySelector(".input-file");
+      const text = document.querySelector(".text");
+
+      function getFileName(e) {
+        const files = e.target.files;
+        const fileName = files[0].name;
+        const extensionFile = fileName.split(".");
+
+        if (
+          extensionFile[extensionFile.length - 1] === "pdf" ||
+          extensionFile[extensionFile.length - 1] === "jpeg"
+        ) {
+          if (files[0].size * 0.001 > 100) {
+            text.textContent = "File size should between 10kb to 100kb";
+          } else {
+            text.textContent = fileName;
+          }
+        } else {
+          text.textContent =
+            "please upload valid file extension like pdf,jpeg etc....";
+        }
+      }
+
+    //   change is use when user modifies value of input field
+        inputFile.addEventListener("change", getFileName);
+    
+    </script>
+  </body>
+</html>

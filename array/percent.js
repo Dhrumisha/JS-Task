@@ -5,7 +5,7 @@ for (let el of arr) {
     arr[i]= arr[i] - offer;
     i++;
 }
-// console.log(arr);
+console.log(arr);
 
 let courses = ["HTML", "CSS", "JavaScript", "React"];
 

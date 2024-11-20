@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Click the button to start countdown</button>
+    <p class="count"></p>
+
+    <script>
+      const btn = document.querySelector(".btn");
+      const count = document.querySelector(".count");
+
+
+      const countDown = () => {
+        let time = + prompt("enter number you want to start countdown from...")
+        const tick = () => {
+          count.textContent = time;
+          if (time === 0) {
+            clearInterval(timer);
+            count.textContent = "your time is up!";
+          } else {
+            time--;
+          }
+        };
+        tick();
+        const timer = setInterval(tick, 2000);
+        return timer;
+      }; 
+      btn.addEventListener("click", countDown);
+    </script>
+  </body>
+</html>

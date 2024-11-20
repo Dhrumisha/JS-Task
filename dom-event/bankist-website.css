@@ -1,0 +1,52 @@
+.section-1{
+    background-color: antiquewhite;
+    /* height: 600px; */
+    padding-top: 80px;
+}
+.link{
+    color: red;
+}
+.tabs-content{
+    background-color: rgba(127, 255, 212, 0.278);
+    padding: 10px;
+    margin-top: 10px;
+}
+.tab-content{
+    display: none;
+    opacity: 0;
+}
+.tab-btn-active{
+    transform: translateY(-10px);
+    /* background-color: aqua; */
+}
+.tab_container{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    border-radius: 10px;
+}
+
+.tabs-content-active{
+    display: block;
+    opacity: 1;
+}
+.tab-detail{
+    padding: 60px 0;
+}
+.sticky{
+    position: fixed;
+    background-color: azure;
+    width: 100%;
+}
+.section{
+    opacity: 1;
+    transform: translateY(0rem);
+}
+.section-hidden{
+    opacity: 0;
+    transform: translateY(8rem);
+}
+.navbar{
+    z-index: 9999;
+}
